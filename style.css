@@ -1,103 +1,168 @@
-* {
-    margin: 0px;
-    padding: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    /* background-color:#0b0b0c; */
+  
+    font-family: 'Poppins', sans-serif
+    
+}
+
+.Contact 
+{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px ;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    background: url(https://media.istockphoto.com/id/1035728732/photo/dark-texture-background.jpg?b=1&s=170667a&w=0&k=20&c=oNwvWoWtI1uIAghJ8eBAJcSe4vXRIpOFwG8AXWoMBlo=);
+    background-size: cover;
    
 }
-.product {
-    background:url(https://img2.goodfon.com/wallpaper/big/d/b8/abstrakciya-render-fon-chernyy.jpg);
-    background-size:cover;
-}
-div {
-    display: inline-block;
-}
-
-.threeSpread {
-    width: 100%;
-    margin: 40px 0px 20px 0px;
-    /* background-image:#08080e77; */
-}
-
-
- .heading{
-    width: 100%;
+.content
+{
+    max-width: 800px;
     text-align: center;
-    color: aliceblue;
-    font-style:italic;
-    font-size: large;
-
- }
-
-div.inner, div.outer {
-    margin: 19px;
-    text-align: center;
-    /* font-style: italic; */
-    font-size:large;
 }
 
-.unclassed {
-    text-align: center;
-    margin: 19px;
+.content h2
+{
+    font-size: 36px;
+    font-weight: 500;
+    color: #00bcd4;
+    margin-top: 50px;
+    
+}
+
+.content p
+{
+    font-weight: 300;
+    color: #fff;
+}
+
+.container 
+{
     width: 100%;
-    /* font-style: italic; */
-    font-size:large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+   
 }
 
-.outer a{
-text-decoration: none;
-    color: #fdfdfc;
-    font-size: 14px;
+.container .contactInfo
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
-.btn{
-    background-color:#FE702D;
-    cursor: pointer;
-    border:none ; 
-    /* color: rgb(10, 10, 10); */
+.container .contactInfo .box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon
+{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box .text
+{
+    display: flex;
+    margin-left: 20px;
     font-size: 16px;
-    border-radius: 0px;
-    text-decoration:none;
-    width: 300px;
-    padding: 6px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
 }
 
-       
+.container .contactInfo .box .text h3
+{
+    font-weight: 500;
+    color: #00bcd4;
+}
 
- .inner a{
-    text-decoration: solid;
-    color: #fffefd;
-    cursor: pointer;
+.contactForm
+{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    
+}
+
+.contactForm h2
+{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;  
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
     font-size: 16px;
-    border-radius: 6px;
- }
-  
-
-
-@media (max-width: 568px) {
-
-    .outer img {
-        float: left;
-        margin-right: 50px;
-    }
-
-    .inner img {
-        float: right;
-        margin-right: 50px;
-    }
-
-    h2 {
-        margin-top: 50px
-      
-      }
-      
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
 }
-      
-        
 
-    
-    
-    
+.contactForm .inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translate(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]
+{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
 
 
 
