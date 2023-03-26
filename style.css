@@ -1,115 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Lobster&display=swap');
+
 *{
-    margin: 0px;
-    padding: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: arial;
+    font-family: 'alkatra';
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
 }
 
-.wrapper{
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-    background-color: #aaa;
-    background-image: url("https://media.istockphoto.com/id/877787978/photo/dark-blue-abstract-background.jpg?s=170667a&w=0&k=20&c=n4SntaAaX9jHueWMRCjFAJxE9dK55R_PyBeU1d7EvCU=");
-    background-repeat: no-repeat;
-    background-size: cover;
+:root {
+    --bg-font: 5rem;
+    --h2-font: 2.25rem;
+    --p-font: 0.9reM;
 }
-
-.row{
-    width: 100%;
-    padding: 50px 100px;
-}
-
-.image-section{
-    width: 30%;
-    float: left;
-}
-
-.image-section img{
-    width: 100%;
-    height: auto;
-}
-
-.content{
-    width: 60%;
-    float: left;
-    margin-left: 50px;
-}
-
-.content h1{
-    font-size: 90px;
-    font-family: Lobster;
-    letter-spacing: 3.5px;
-    margin-top: 25px;
+::selection{
+    background: #ff702a;
     color: #fff;
 }
-
-.content h2{
-    font-size: 40px;
-    font-family: lobster;
-    color: mediumvioletred;
-    margin-top: 25px;
+body{
+    background-image: url("https://img.freepik.com/free-vector/dark-black-background-design-with-stripes_1017-38064.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:#fff ;
+    background-color: black;
 }
-
-.content p{
-    font-size: 20px;
-    font-family: serif;
-    color: white;
-    margin-top: 10px;
-    line-height: 1.5;
-}
-.container{
-    width: 90%;
-    padding: 20px;
-    margin: 100px auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.box{
-    width: 250px;
-    margin: 0 10px;
-    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
-    transition: 1s;
-}
-
-
-img{
-    display: block;
+header{
+    position: fixed;
+    top: 0;
+    right: o;
     width: 100%;
-    border-radius: 5px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 170px;
+    
+}
+.logo{
+    color: #ff702a;
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color:#fff ;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+.navbar a:hover{
+    color: #ff702a;
+    transition: 0.4sec;
+}
+#menu-icon{
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+section{
+    padding: 70px 17%;
+}
+.home{
+    width: 100%;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    align-items: center;
+}
+.home-img img{
+    max-width: 80%;
+    width: 400px;
+    height: auto;
+}
+.home-text h1{
+    font-size: var(--big-font);
+    color: #ff702a;
+}
+.home-text h2{
+    font-size: var(--h2-font);
+    margin: 1rem 0 2rem;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff702a ;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+.btn:hover{
+    transform: scale(1.2) translate(10px)
+    transition: 0.4sec;
 }
 
-.box:hover{
-    transform: scale(1.3);
-    z-index: 2px;
+@media (max-width: 1560px){
+    header{
+        padding: 15px 40px;
+    }
+    :root{
+        --big-font:3.5rem;
+        --h2-font: 2rem;
+    }
 }
 
-@media screen and (max-width: 768px){
-    .image-section{
-        width: 100%;
-        float: none;
+@media (max-width: 11400px){
+    section{
+        padding: 50px 8%;
     }
-    .content{
-        width: 100%;
-        float: none;
-        margin-left: 0px;
+    #menu-icon {
+        display: initial;
+        color:#fff;
     }
-    .content h1{
-        font-size: 60px;
-        letter-spacing: 2px;
-        margin-top: 30px;
+    header.navbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: #2b2640;
+        transition: 0.3sec;
     }
-    
-    .content h2{
-        font-size: 30px;
+    header.navber.active{
+        top: 70px;
     }
-    
-    .content p{
-        font-size: 18px;
-        
+    .navbar a{
+        padding: 1.5rem;
+        display: block;
     }
-    
 }
-    
